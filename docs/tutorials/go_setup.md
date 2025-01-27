@@ -11,21 +11,21 @@
 2. Installation Steps
     1. Open up the terminal. Run the following commands:
 
-        ```
+        `
         mkdir go_devcontainer
-        ```
+        `
 
-        ```
+        `
         cd go_devcontainer
-        ```
+        `
 
         This makes a new directory
 
     2. Run this command:
 
-        ```
+        `
         git init
-        ```
+        `
 
         This initializes a Git repository in the directory that you just made
 
@@ -40,24 +40,25 @@
 
     6. Paste the following inside of the 'devcontainer.json' file:
 
-    ```
-    {
-        "name": "Go Dev",
-        "image": "mcr.microsoft.com/devcontainers/go:latest",
-        "features": {
-            "ghcr.io/devcontainers/features/docker-in-docker:1": {}
-        },
-        "postCreateCommand": "go version", 
-        "customizations": {
-            "vscode": {
-                "settings": {},
-                "extensions": [
-                    "ms-go.go"
-                ]
+        `
+        {
+            "name": "Go Dev",
+            "image": "mcr.microsoft.com/devcontainers/go:latest",
+            "features": {
+                "ghcr.io/devcontainers/features/docker-in-docker:1": {}
+            },
+            "postCreateCommand": "go version", 
+            "customizations": {
+                "vscode": {
+                    "settings": {},
+                    "extensions": [
+                        "ms-go.go"
+                    ]
+                }
             }
         }
-    }
-    ```
+        `
+    
     
 
         
@@ -67,8 +68,10 @@
        and Reopen in Container.
 
 
-    8. In the src, create a file called "main.go" and copy this into it:
+    8. Create a directory called src. In the src, create a file called "main.go" and copy this into it:
 
+    `
+    
         package main
 
         import "fmt"
@@ -77,8 +80,9 @@
             fmt.Println("Hello COMP423")
         }
 
+    `
 
-    9. Navigate to the terminal in VSCode.
+    9. Navigate to the terminal in VSCode. cd into the src directory.
 
 
     10. Run the command: go run main.go.
